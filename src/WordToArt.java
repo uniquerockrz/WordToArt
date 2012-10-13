@@ -80,19 +80,32 @@ public class WordToArt {
 		obj.generateArt();
 	}
 	
+	 /**
+	 * public void initChar()
+	 * read the words from the .conf file and set the characters  to use in ASCII art.
+	 */
+	 
+	public void initChar() throws FileNotFoundException, IOException {
+		FileReader fr = new FileReader(".conf");
+		BufferedReader br1 = new BufferedReader(fr);
+		String s1 = br1.readLine();
+		a = s1.charAt(0);
+		b = s1.charAt(2);
+	}
+	
 	/**
 	 * public void generateArt()
 	 * read ASCII art instructions from a file and copy it to an array of Strings	
 	 * then print the art according to instructions 
 	 */
-
+	
 	public void generateArt() throws FileNotFoundException, IOException
 	{
 		/**
 		 * This part of the functions copies the ASCII art instructions from the chars.dat file
 		 * to an array
 		 */
-		
+		initChar();
 		int len = this.word.length(), i = 0;
 		// len: length of supplied word
 		// i: counter
