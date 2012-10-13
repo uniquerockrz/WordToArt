@@ -67,9 +67,15 @@ public class WordToArt {
 	
 	public static void main(String[] args) throws IOException
 	{
+		String s;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.print("Enter Word: ");
-		String s = br.readLine();
+		if(args.length < 1) {
+			System.out.print("Enter Word: ");
+			s = br.readLine();
+		}
+		else {
+			s = args[0];
+		}
 		WordToArt obj = new WordToArt(s);
 		obj.generateArt();
 	}
