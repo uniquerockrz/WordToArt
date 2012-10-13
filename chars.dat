@@ -1,0 +1,27 @@
+A-9-b1,a7,b1-a1,b7,a1-a1,b7,a1-a1,b7,a1-a8,a1-a1,b7,a1-a1,b7,a1-a1,b7,a1-
+B-8-a7,b1-a1,b6,a1-a1,b6,a1-a7,a1-a1,b6,a1-a1,b6,a1-a1,b6,a1-a7,b1-
+C-9-b1,a7,a1-a1,b7,b1-a1,b7,b1-a1,b7,b1-a1,b7,b1-a1,b7,b1-a1,b7,b1-b1,a7,a1-
+D-9-a8,b1-b1,a1,b6,a1-b1,a1,b6,a1-b1,a1,b6,a1-b1,a1,b6,a1-b1,a1,b6,a1-b1,a1,b6,a1-a8,b1-
+E-8-a7,a1-a1,b6,b1-a1,b6,b1-a6,b1,b1-a1,b6,b1-a1,b6,b1-a1,b6,b1-a7,a1-
+F-8-a7,a1-a1,b6,b1-a1,b6,b1-a6,b1,b1-a1,b6,b1-a1,b6,b1-a1,b6,b1-a1,b6,b1-
+G-9-a8,a1-a1,b7,b1-a1,b7,b1-a1,b7,b1-a1,b2,a5,a1-a1,b7,a1-a1,b7,a1-a8,a1-
+H-9-a1,b7,a1-a1,b7,a1-a1,b7,a1-a8,a1-a1,b7,a1-a1,b7,a1-a1,b7,a1-a1,b7,a1-
+I-9-a8,a1-b4,a1,b3,b1-b4,a1,b3,b1-b4,a1,b3,b1-b4,a1,b3,b1-b4,a1,b3,b1-b4,a1,b3,b1-a8,a1-
+J-10-a9,a1-b5,a1,b3,b1-b5,a1,b3,b1-b5,a1,b3,b1-b5,a1,b3,b1-a1,b4,a1,b3,b1-a1,b4,a1,b3,b1-a6,b3,b1-
+K-9-a1,b6,a1,b1-a1,b3,a1,b3,b1-a1,b1,a1,b5,b1-a1,b7,b1-a1,b1,a1,b5,b1-a1,b3,a1,b3,b1-a1,b5,a1,b1,b1-a1,b7,a1-
+L-9-a1,b7,b1-a1,b7,b1-a1,b7,b1-a1,b7,b1-a1,b7,b1-a1,b7,b1-a1,b7,b1-a8,a1-
+M-9-a1,b7,a1-a2,b5,a1,a1-a1,b1,a1,b3,a1,b1,a1-a1,b2,a1,b1,a1,b2,a1-a1,b3,a1,b3,a1-a1,b7,a1-a1,b7,a1-a1,b7,a1-
+N-9-a1,b7,a1-a2,b6,a1-a1,b1,a1,b5,a1-a1,b2,a1,b4,a1-a1,b3,a1,b3,a1-a1,b4,a1,b2,a1-a1,b5,a1,b1,a1-a1,b7,a1-
+O-10-b1,a8,b1-a1,b8,a1-a1,b8,a1-a1,b8,a1-a1,b8,a1-a1,b8,a1-a1,b8,a1-b1,a8,b1-
+P-9-a8,b1-a1,b7,a1-a1,b7,a1-a8,b1-a1,b7,b1-a1,b7,b1-a1,b7,b1-a1,b7,b1-
+Q-11-a10,b1-a1,b8,a1,b1-a1,b8,a1,b1-a1,b8,a1,b1-a1,b5,a1,b2,a1,b1-a1,b6,a1,b1,a1,b1-a10,b1-b10,a1-
+R-9-a8,a1-a1,b7,a1-a1,b7,a1-a8,a1-a1,b1,a1,b5,b1-a1,b3,a1,b3,b1-a1,b5,a1,b1,b1-a1,b7,a1-
+S-8-a7,a1-a1,b6,b1-a1,b6,b1-a7,a1-b7,a1-b7,a1-b7,a1-a7,a1-
+T-9-a8,a1-b4,a1,b3,b1-b4,a1,b3,b1-b4,a1,b3,b1-b4,a1,b3,b1-b4,a1,b3,b1-b4,a1,b3,b1-b4,a1,b3,b1-
+U-8-a1,b6,a1-a1,b6,a1-a1,b6,a1-a1,b6,a1-a1,b6,a1-a1,b6,a1-a1,b6,a1-b1,a6,b1-
+V-16-a1,b14,a1-b1,a1,b12,a1,b1-b2,a1,b10,a1,b1,b1-b3,a1,b8,a1,b2,b1-b4,a1,b6,a1,b3,b1-b5,a1,b4,a1,b4,b1-b6,a1,b2,a1,b5,b1-b7,a2,b6,b1-
+W-24-a1,b22,a1-b1,a1,b20,a1,b1-b2,a1,b18,a1,b1,b1-b3,a1,b16,a1,b2,b1-b4,a1,b6,a2,b6,a1,b3,b1-b5,a1,b4,a1,b2,a1,b4,a1,b4,b1-b6,a1,b2,a1,b4,a1,b2,a1,b5,b1-b7,a2,b6,a2,b6,b1-
+X-17-a1,b15,a1-b2,a1,b11,a1,b1,b1-b4,a1,b7,a1,b3,b1-b6,a1,b3,a1,b5,b1-b8,a1,b7,b1-b6,a1,b3,a1,b5,b1-b4,a1,b7,a1,b3,b1-b2,a1,b11,a1,b1,b1-
+Y-12-a1,b10,a1-b1,a1,b7,a1,b1,b1-b3,a1,b3,a1,b3,b1-b5,a1,b5,b1-b5,a1,b5,b1-b5,a1,b5,b1-b5,a1,b5,b1-b5,a1,b5,b1-
+Z-8-a7,a1-b6,a1,b1-b5,a1,b1,b1-b4,a1,b2,b1-b3,a1,b3,b1-b2,a1,b4,b1-b1,a1,b5,b1-a7,a1-
+ -5-b4,b1-b4,b1-b4,b1-b4,b1-b4,b1-b4,b1-b4,b1-b4,b1-

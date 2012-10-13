@@ -1,0 +1,5 @@
+The current program supports letters A to Z and space. You can add new characters and numbers as well. To do so. create the art using your
+favourite text editor in the file abc.txt and save it. The art must be of 8 lines long, noting more, nothing less. You can see the example
+given of A. Now run the class StarCount and you will get some code that will provide the program WordToArt instructions in printing the art.
+Open the file chars.dat and save the code there, along with the character that represents the code. Next time you run WordToArt, you will
+be able to print the art of the letter.
