@@ -140,7 +140,7 @@ public class WordToArt {
 		// l : total length of ASCII art line
 		// j, k: counters
 		// rough: for throwing unused tokens
-		for(i=0; i<len; i++){
+		for(i=1; i<len; i++){
 			StringTokenizer str = new StringTokenizer(sa[i], "-");
 			rough = str.nextToken();
 			l+=Integer.parseInt(str.nextToken());
