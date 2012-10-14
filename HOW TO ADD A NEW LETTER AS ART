@@ -3,3 +3,26 @@ favourite text editor in the file abc.txt and save it. The art must be of 8 line
 given of A. Now run the class StarCount and you will get some code that will provide the program WordToArt instructions in printing the art.
 Open the file chars.dat and save the code there, along with the character that represents the code. Next time you run WordToArt, you will
 be able to print the art of the letter.
+
+While adding art, its important that all the characters have same number of characters and spaces in each line, else the ASCII design will fail.
+Specially take care if the spaces at the end of the line. We have represted spaces here with 0. So for the letter L, the art must be:
+
+*00000000
+*00000000
+*00000000
+*00000000
+*00000000
+*00000000
+*00000000
+*********
+
+and NOT
+
+*
+*
+*
+*
+*
+*
+*
+*********
