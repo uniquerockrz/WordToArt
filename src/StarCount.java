@@ -10,7 +10,7 @@ import java.io.*;
  * See the LICENSE file to learn more
  */
 public class StarCount {
-	static char a ='*', b=' ';
+	static char a ='*', b='0';
 	public StarCount() {
 	
 	}
