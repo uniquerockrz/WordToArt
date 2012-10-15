@@ -78,8 +78,13 @@ public class WordToArt {
 				s+=(args[tmp]+" ");
 			}
 		}
-		WordToArt obj = new WordToArt(s);
-		obj.generateArt();
+		try {
+			WordToArt obj = new WordToArt(s);
+			obj.generateArt();
+		}
+		catch(NullPointerException npe) {
+			System.out.println("Could not find definition for one of the character of your string in chars.dat");
+		}
 	}
 	
 	 /**
@@ -101,7 +106,7 @@ public class WordToArt {
 	 * then print the art according to instructions 
 	 */
 	
-	public void generateArt() throws FileNotFoundException, IOException
+	public void generateArt() throws FileNotFoundException, IOException, NullPointerException
 	{
 		/**
 		 * This part of the functions copies the ASCII art instructions from the chars.dat file
