@@ -121,10 +121,17 @@ public class WordToArt {
 		String buffer; // read buffer from file, one line at a time
 		while (i<len){
 			ch = this.word.charAt(i);
+			String token;
+			if(ch == '-') {
+				token="=";
+			}
+			else {
+				token="-";
+			}
 			FileReader fr = new FileReader("chars.dat");
 			BufferedReader br1 = new BufferedReader(fr);
 			while((buffer=br1.readLine()) != null){ // continue reading until EOF
-				StringTokenizer str = new StringTokenizer(buffer, "-");
+				StringTokenizer str = new StringTokenizer(buffer, token);
 				if(str.nextToken().equalsIgnoreCase(Character.toString(ch))){ // if this line equals the instructions we are looking for
 					sa[i]=buffer; // copy the instruction to array
 					br1.close();
@@ -148,7 +155,14 @@ public class WordToArt {
 		// j, k: counters
 		// rough: for throwing unused tokens
 		for(i=0; i<len; i++){
-			StringTokenizer str = new StringTokenizer(sa[i], "-");
+			String token;
+			if(sa[i].charAt(0) == '-') {
+				token="=";
+			}
+			else {
+				token="-";
+			}
+			StringTokenizer str = new StringTokenizer(sa[i], token);
 			rough = str.nextToken();
 			l+=Integer.parseInt(str.nextToken());
 		}
@@ -168,7 +182,14 @@ public class WordToArt {
 		int line; //line number to be printed 
 		for(line=1; line<=8; line++){
 			for(i=0; i<len; i++){
-				StringTokenizer str = new StringTokenizer(sa[i], "-");
+				String token;
+				if(sa[i].charAt(0) == '-') {
+					token="=";
+				}
+				else {
+					token="-";
+				}
+				StringTokenizer str = new StringTokenizer(sa[i], token);
 				
 				//printing first spaces for each word
 				
