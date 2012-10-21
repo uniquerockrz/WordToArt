@@ -1,4 +1,4 @@
-![Typical output](/banner.png)
+![Typical output](https://github.com/uniquerockrz/WordToArt/blob/master/banner.png?raw=true)
 
 Yes thats what I am trying to do.
 
