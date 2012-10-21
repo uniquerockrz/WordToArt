@@ -1,4 +1,3 @@
 * configurable size of the output, currently its limited to 8 lines
 * multiple lines of ASCII art, currently supports just one line
 * symbols support and multiple character and smiley support like <3, :-) etc
-* cannot display - (hypen) as character. Bug.
