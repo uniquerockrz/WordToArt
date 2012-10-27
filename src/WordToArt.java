@@ -26,8 +26,6 @@ import java.util.*;
  * or suggest more features
  */
 
-// TODO configurable characters except stars and spaces
-// TODO configuration file to read configurations
 // TODO configurable size of the output, currently its limited to 8 lines
 // TODO multiple lines of ASCII art, currently supports just one line
 // TODO symbols support and multiple character and smiley support like <3, :-) etc
@@ -41,7 +39,7 @@ import java.util.*;
 
 public class WordToArt {
 	static char a =' ', b ='@';
-	
+	static boolean multiline = false;
 	// a and b are the words that can be used in ASCII art, change it according to your preferences
 	// later this will be read from a configuration file
 	// sa: String array for storing ASCII art instructions
@@ -69,21 +67,36 @@ public class WordToArt {
 	{
 		String s="";
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		WordToArt obj;
+		initChar();
 		if(args.length < 1) {
 			System.out.print("Enter Word: ");
 			s = br.readLine();
 		}
 		else {
 			for(int tmp=0;tmp<args.length;tmp++) {
-				s+=(args[tmp]+" ");
+				if(multiline) {
+					s+=(args[tmp]+" ");
+				}
+				else {
+					try {
+						obj = new WordToArt(args[tmp]);
+						obj.generateArt();
+					}
+					catch(NullPointerException npe) {
+						System.out.println("Could not find definition for one of the character of your string in chars.dat");
+					}
+				}	
 			}
 		}
-		try {
-			WordToArt obj = new WordToArt(s);
-			obj.generateArt();
-		}
-		catch(NullPointerException npe) {
-			System.out.println("Could not find definition for one of the character of your string in chars.dat");
+		if(multiline) {		
+			try {
+				obj = new WordToArt(s);
+				obj.generateArt();
+			}
+			catch(NullPointerException npe) {
+				System.out.println("Could not find definition for one of the character of your string in chars.dat");
+			}
 		}
 	}
 	
@@ -92,12 +105,16 @@ public class WordToArt {
 	 * read the words from the .conf file and set the characters  to use in ASCII art.
 	 */
 	 
-	public void initChar() throws FileNotFoundException, IOException {
+	public static void initChar() throws FileNotFoundException, IOException {
 		FileReader fr = new FileReader(".conf");
 		BufferedReader br1 = new BufferedReader(fr);
 		String s1 = br1.readLine();
 		a = s1.charAt(0);
 		b = s1.charAt(2);
+		s1 = br1.readLine();
+		if(s1.equalsIgnoreCase("false")) {
+			multiline=true;
+		}
 	}
 	
 	/**
@@ -112,7 +129,6 @@ public class WordToArt {
 		 * This part of the functions copies the ASCII art instructions from the chars.dat file
 		 * to an array
 		 */
-		initChar();
 		int len = this.word.length(), i = 0;
 		// len: length of supplied word
 		// i: counter
