@@ -15,7 +15,7 @@ import java.util.*;
  * can also distribute your edited sources provided you do that under a free software license
  * commonly known as open-source.
  * 
- * This program is licensed under GPL v3 and statement of the license must be distributed with the
+ * This program is licensed under GPL v2 and statement of the license must be distributed with the
  * source code
  */
 
