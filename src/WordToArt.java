@@ -27,7 +27,6 @@ import java.util.*;
  */
 
 // TODO configurable size of the output, currently its limited to 8 lines
-// TODO multiple lines of ASCII art, currently supports just one line
 // TODO symbols support and multiple character and smiley support like <3, :-) etc
 // TODO accept word from command line arguments
 
@@ -35,13 +34,17 @@ import java.util.*;
  *  Current features
  * Read ascii art instructions from a file and generate output accordingly
  * Spaces before each word and above each word
+ * Multiple lines of ASCII art, currently supports just one line
+ * Command line parameters: -c, to get custom character from characters.conf file; and -m to enable multiline mode.
  */
 
 public class WordToArt {
 	static char a =' ', b ='@';
 	static boolean multiline = false;
 	// a and b are the words that can be used in ASCII art, change it according to your preferences
-	// later this will be read from a configuration file
+	// a and b get updated through characters.conf file if -c parameter is found on command line
+	// First line is "a". 2nd is "b"
+	// multiline is set to false as default, but can be activated with -m parameter on command line
 	// sa: String array for storing ASCII art instructions
 	
 	private String word; //the word to be converted to ASCII art
@@ -65,38 +68,59 @@ public class WordToArt {
 	
 	public static void main(String[] args) throws IOException
 	{
-		String s="";
+		//Parsing input parameters
+		String s="";//stores the words to convert if multiline mode is DISABLED
+		String [] w = new String [0];//stores the words to convert if multiline mode is ENABLED
+		boolean empty = true;//checks if a word was introduced as parameter
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		WordToArt obj;
-		initChar();
-		if(args.length < 1) {
-			System.out.print("Enter Word: ");
-			s = br.readLine();
-		}
-		else {
+		
+		while (empty){
 			for(int tmp=0;tmp<args.length;tmp++) {
-				if(multiline) {
-					s+=(args[tmp]+" ");
-				}
-				else {
-					try {
-						obj = new WordToArt(args[tmp]);
-						obj.generateArt();
+				if(args[tmp].contains("-c"))
+					initChar();
+				else if(args[tmp].contains("-m"))
+					 multiline = true;
+				else{
+					empty = false;
+					
+					if (multiline){
+						if (w.length == 0)
+							w = new String [args.length - tmp];//Initializes the string array which will content the words in multiline mode.
+						w[w.length - (args.length - tmp)] = args[tmp];
 					}
-					catch(NullPointerException npe) {
-						System.out.println("Could not find definition for one of the character of your string in chars.dat");
-					}
+					else
+						s += args[tmp] + " ";
 				}	
 			}
+			
+			if (empty){
+				System.out.print("Enter Word: ");
+				args = br.readLine().split(" ");
+				
+				//Reseting options
+				w = new String [0];
+				multiline = false;
+				a = ' ';
+				b = '@';
+			}
 		}
-		if(multiline) {		
-			try {
+		
+		WordToArt obj;
+
+		try {
+			if(!multiline){
 				obj = new WordToArt(s);
 				obj.generateArt();
 			}
-			catch(NullPointerException npe) {
-				System.out.println("Could not find definition for one of the character of your string in chars.dat");
+			else{
+				for(String word : w){
+					obj = new WordToArt(word);
+					obj.generateArt();
+				}	
 			}
+		}
+		catch(NullPointerException npe) {
+			System.out.println("Could not find definition for one of the character of your string in chars.dat");
 		}
 	}
 	
@@ -106,15 +130,12 @@ public class WordToArt {
 	 */
 	 
 	public static void initChar() throws FileNotFoundException, IOException {
-		FileReader fr = new FileReader(".conf");
+		FileReader fr = new FileReader("characters.conf");
 		BufferedReader br1 = new BufferedReader(fr);
 		String s1 = br1.readLine();
 		a = s1.charAt(0);
-		b = s1.charAt(2);
 		s1 = br1.readLine();
-		if(s1.equalsIgnoreCase("false")) {
-			multiline=true;
-		}
+		b = s1.charAt(0);
 	}
 	
 	/**
