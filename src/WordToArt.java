@@ -27,8 +27,7 @@ import java.util.*;
  */
 
 // TODO configurable size of the output, currently its limited to 8 lines
-// TODO symbols support and multiple character and smiley support like <3, :-) etc
-// TODO accept word from command line arguments
+// TODO more symbols support
 
 /**
  *  Current features
