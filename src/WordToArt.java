@@ -51,7 +51,7 @@ public class WordToArt {
 	/**
 	 * public WordToArt(String)
 	 * Constructor that just copies user supplied word to a private variable
-	 * @params w: the word
+	 * @param w: the word
 	 */
 	
 	public WordToArt(String w) {
@@ -135,6 +135,7 @@ public class WordToArt {
 		a = s1.charAt(0);
 		s1 = br1.readLine();
 		b = s1.charAt(0);
+		br1.close();
 	}
 	
 	/**
