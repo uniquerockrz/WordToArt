@@ -1,11 +1,14 @@
-The current program supports letters A to Z and space. You can add new characters and numbers as well. To do so. create the art using your
-favourite text editor in the file abc.txt and save it. The art must be of 8 lines long, noting more, nothing less. You can see the example
-given of A. Now run the class StarCount and you will get some code that will provide the program WordToArt instructions in printing the art.
-Open the file chars.dat and save the code there, along with the character that represents the code. Next time you run WordToArt, you will
-be able to print the art of the letter.
+The current program supports characters A-Z, 0-9, and a few special characters (check chars.dat for a complete listing). You can add new characters 
+and numbers as well. To do so, create the art in the abc.txt file with your favorite text editor and save it. The art must be of 8 lines tall, 
+nothing more, nothing less. See the example of the letter "L" below or the colon (":") character in the abc.txt file.
 
-While adding art, its important that all the characters have same number of characters and spaces in each line, else the ASCII design will fail.
-Specially take care if the spaces at the end of the line. We have represted spaces here with 0. So for the letter L, the art must be:
+After adding the art, run the StarCount program located in the "src" directory. The program will output some code in the terminal that will provide 
+the WordToArt program some instructions for printing the art. Next, open the file chars.dat and write the character that you are adding with a 
+hyphen next to it (in the case of the letter "L", L-<YOUR GENERATED CODE HERE>). Next time you run WordToArt, you will be able to print the art of 
+the letter.
+
+While adding art, its important that all the characters have same number of characters and spaces in each line otherwise the ASCII design will fail.
+Be especially carefule with the spaces at the end of the line. We have represted spaces here with 0. So for the letter L, the art must be:
 
 *00000000
 *00000000
